@@ -1,0 +1,22 @@
+[server]
+AppName="dbops"
+HttpPort=":8080"
+# possible values: DEBUG, INFO, WARNING, ERROR, FATAL
+LogLevel = "DEBUG"
+# debug 开发模式，release 生产模式
+AppMode = "debug"
+
+[mysql]
+IP = "10.1.21.23"
+Port = "3306"
+User= "utest"
+Password = "i9FVmuga98Kp~KO"
+Database = "dbops"
+#单位秒
+MaxIdleTime=900
+MaxOpenConns=10
+MaxIdleConns=1
+
+[redis]
+IP = "127.0.0.1"
+Port = 6379
