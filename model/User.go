@@ -7,7 +7,7 @@ func (User) TableName() string {
 
 type User struct {
 	Id         int    `json:"id"`
-	Name       string `json:"name"`
+	UserName   string `json:"username"`
 	NickName   string `json:"nickName"`
 	Avatar     string `json:"avatar"`
 	Password   string `json:"password"`

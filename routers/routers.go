@@ -2,18 +2,22 @@ package routers
 
 import (
 	"dbOper/controller"
-	"dbOper/middleware"
+	"dbOper/util"
 	"github.com/gin-gonic/gin"
 )
 
 func SetRouter() *gin.Engine {
+	gin.SetMode(util.ApplicationConfig.GetString("server.AppMode"))
 	r := gin.Default()
-	r.Use(middleware.CORSMiddleware())
+	//r.Use(middleware.CORSMiddleware())
+
 	/**
 	用户User路由组
 	*/
 	userGroup := r.Group("user")
 	{
+		//用户登录
+		userGroup.POST("/login", controller.Login)
 		//增加用户User
 		userGroup.POST("/users", controller.CreateUser)
 		//查看所有的User

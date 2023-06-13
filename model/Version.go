@@ -5,6 +5,6 @@ func (Version) TableName() string {
 }
 
 type Version struct {
-	Id   int    `json:"id"`
-	Name string `json:"name"`
+	Id       int    `json:"id"`
+	UserName string `json:"username"`
 }

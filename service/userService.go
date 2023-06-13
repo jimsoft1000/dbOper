@@ -2,7 +2,19 @@ package service
 
 import (
 	"dbOper/model"
+	"fmt"
 )
+
+/**
+用户登录
+*/
+func Login(username string, pwd string) (user *model.User, err error) {
+	fmt.Println("login")
+	if err = GetMysqlCon().Where("user_name=? and pwd=", username, pwd).First(user).Error; err != nil {
+		return nil, err
+	}
+	return
+}
 
 /**
 新建User信息

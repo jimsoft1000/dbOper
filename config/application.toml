@@ -1,6 +1,6 @@
 [server]
 AppName="dbops"
-HttpPort=":8080"
+HttpPort="127.0.0.1:8080"
 # possible values: DEBUG, INFO, WARNING, ERROR, FATAL
 LogLevel = "DEBUG"
 # debug 开发模式，release 生产模式
